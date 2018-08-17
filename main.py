@@ -17,11 +17,3 @@ y = np.array([[0],[1],[0],[1], [1], [0], [0], [1], [0]])
 nn = NeuralNetwork(x,y)
 
 nn.train(1500)
-
-validation = np.array([
-    [140, 204, 29]
-])
-
-validation = np.divide(validation, 255)
-
-nn.value(validation)
