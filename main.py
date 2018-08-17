@@ -1,4 +1,5 @@
-from nn import *
+from nn import NeuralNetwork
+import numpy as np
 
 x = np.array([  [255,255,255],
                 [0,0,0],
