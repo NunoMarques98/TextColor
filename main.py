@@ -1,5 +1,6 @@
 from nn import NeuralNetwork
 import numpy as np
+import pandas as pd
 
 x = np.array([  [255,255,255],
                 [0,0,0],
