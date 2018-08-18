@@ -11,11 +11,18 @@ x = np.divide(x, 255)
 y = np.array([textColors[1:]])
 y = np.transpose(y)
 
-nn = NeuralNetwork(x, y, 0.01)
+nn = NeuralNetwork(x, y, 0.02)
 
 results = nn.train(3000)
 
 keys = list(results.keys())
 itens = [results[p] for p in keys]
 
-print(pyplot.plot(keys, itens))
+pyplot.plot(keys, itens)
+
+pyplot.xlabel("Epochs")
+pyplot.ylabel("Loss")
+
+#pyplot.show()
+
+print(nn.value([[209, 117, 23]]))
