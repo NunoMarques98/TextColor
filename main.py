@@ -11,7 +11,7 @@ x = np.divide(x, 255)
 y = np.array([textColors[1:]])
 y = np.transpose(y)
 
-nn = NeuralNetwork(x,y)
+nn = NeuralNetwork(x, y, 0.01)
 
 results = nn.train(3000)
 
