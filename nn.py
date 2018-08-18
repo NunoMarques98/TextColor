@@ -35,14 +35,18 @@ class NeuralNetwork():
         return np.sum(errorMatrix)
 
     def train(self, epochs):
+
+        epochsVsError = {}
         
         for i in range(epochs):
             
             self.feedForward()
 
-            print("Error in epoch " + str(i) + " is: " + str(self.error()))
+            epochsVsError[i] = self.error()
 
             self.backProp()
+
+        return epochsVsError
 
     def value(self, x):
 
